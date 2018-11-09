@@ -1,0 +1,40 @@
+{
+    "videos":[
+        {
+            "album": "video1",  
+            "artist": "Caballos", 
+            "visualizations": "4", 
+            "description": "Caballos en la naturaleza"
+        },
+        {
+            "album": "video2",  
+            "artist": "Focas", 
+            "visualizations": "5", 
+            "description": "Focas en la naturaleza"
+        },
+        {
+            "album": "video3",  
+            "artist": "Aves", 
+            "visualizations": "9", 
+            "description": "Aves en la naturaleza part 1"
+        },
+        {
+            "album": "video4",  
+            "artist": "Castor", 
+            "visualizations": "6", 
+            "description": "Castor en la naturaleza"
+        },
+        {
+            "album": "video5",  
+            "artist": "Koala", 
+            "visualizations": "7", 
+            "description": "Koala en la naturaleza"
+        },
+        {
+            "album": "video6",  
+            "artist": "Aves", 
+            "visualizations": "8", 
+            "description": "Aves en la naturaleza part 2"
+        }
+    ]
+}
