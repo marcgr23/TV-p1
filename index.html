@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//HbbTV//1.1.1//EN" "http://www.hbbtv.org/dtd/HbbTV-1.1.1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+
+  <title>P1 tv interactiva</title>
+
+  <meta http-equiv="content-type" content="application/vnd.hbbtv.xhtml+xml" charset="UTF-8" />
+  <meta http-equiv="Pragma" content="no-cache" />
+
+  <link rel="stylesheet" type="text/css" href="./css/main.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="./js/hbbtvlib.js"></script>
+  <script type="text/javascript" src="./js/events.js"></script>
+
+</head>
+
+<body>
+
+  <!--
+  The main page should have application manager, and should call show() at onload();
+  -->
+  <object id="oipfAppMan" type="application/oipfApplicationManager"></object>
+
+  <!-- the logical HbbTV Application graphic plane is 1280px horizontally by 720px vertically
+  So the every content should be draw in 1280 * 720 -->
+  <div style="left: 0px; top: 0px; width: 1280px; height: 720px;  position:absolute; border:1px solid #c33;  z-index:-1;"></div>
+
+  <div id="pageInit" style="margin-left: 128px; margin-top: 18px;">
+    <object id="initTV"></object>
+    <!-- Page 1 -->
+    <div id="page1" class="page1">
+      <div id="redButton" class="redButton">
+        <p class="redButtonText">Press  <img height="40px" width="75px" src="./img/red.png"/>  to start application</p>
+      </div>
+    </div>
+
+    <!-- Page 2 -->
+    <div id="page2" class="page2">
+      <p class="page2Text">Sync number </p>
+      <p class="page2Text" id="random"></p>
+      <p style="color: white; font-size:20px; font-family: arial;">Press  <img height="60px" width="60px" src="./img/ok.png"/>  to continue </p>
+    </div>
+  </div>
+
+  <!-- Page 3 -->
+  <div id="page3">
+    <div style="left: 136px; top: 36px; width: 1024px; height: 648px; position:absolute; z-index:1;">
+      <div style="background: #b0d9d9; width:600px; height:580px; top:150px; left:150px; float:left;">
+        <ul style="list-style-type: none;">
+          <li style="border: 2px solid grey; margin: 5px; background-color: black">
+            <img align="top" id= "imgYoutube1" style="margin-left: 15px"/>
+            <div id="video1" class="videoInfo">
+              <div style="float: left;">
+                <p id="album1"></p>
+                <p id="artist1"></p>
+              </div>
+            </div>
+          </li>
+          <li style="border: 2px solid grey; margin: 5px; background-color: black">
+            <img align="top" id= "imgYoutube2" style="margin-left: 15px"/>
+            <div id="video2" class="videoInfo">
+                <div style="float: left;">
+                    <p id="album2"></p>
+                    <p id="artist2"></p>
+                </div>
+            </div>
+          </li>
+          <li style="border: 2px solid grey; margin: 5px; background-color: black">
+            <img align="top" id= "imgYoutube3" style="margin-left: 15px"/>
+            <div id="video3" class="videoInfo">
+                <div style="float: left;">
+                    <p id="album3"></p>
+                    <p id="artist3"></p>
+                </div>
+            </div>
+          </li>
+          <li style="border: 2px solid grey; margin: 5px; background-color: black">
+            <img align="top" id= "imgYoutube4" style="margin-left: 15px"/>
+            <div id="video4" class="videoInfo">
+                <div style="float: left;">
+                    <p id="album4"></p>
+                    <p id="artist4"></p>
+                </div>
+            </div>
+          </li>
+          <li style="border: 2px solid grey; margin: 5px; background-color: black">
+            <img align="top" id= "imgYoutube5" style="margin-left: 15px"/>
+            <div id="video5" class="videoInfo">
+                <div style="float: left;">
+                    <p id="album5"></p>
+                    <p id="artist5"></p>
+                </div>
+            </div>
+            </li>
+        </ul>
+    </div>
+      <div style="background: #b0d9d9; width:400px; height: 580px; top:100px; left:650px; float:left;">
+        <div>
+          <div style="margin-top:15px; margin-left:20px;"  class="live">
+              <object style="background-color: black; position:absolute; border: grey solid 2px" id="miniTV"></object>
+          </div>
+          <div style="margin-left:20px; width: 350px; padding-top: 260px">
+              <h3 style="margin-left: 5px">Connected Users</h3>
+              <ul class="jsonList">
+                <li id="user1"></li>
+                <li id="user2"></li>
+              </ul>
+          </div>
+          <div style="margin-left:20px; width: 350px;">
+              <h3 style="margin-left: 5px">Album Info</h3>
+              <ul class="jsonList">
+                <li id="album"></li>
+                <li id="artist"></li>
+                <li id="views"></li>
+                <li id="description"></li>
+              </ul>
+          </div>
+        </div>
+      </div>
+      <div id="menu" class="menu">
+        <p style="color: white; font-size:20px; font-family: arial;">
+          <img height="40px" width="75px" src="./img/red.png"/> Play Video
+          <img height="40px" width="75px" src="./img/green.png"/> Pause Video
+          <img height="40px" width="75px" src="./img/yellow.png"/> Stop Video
+          <img height="40px" width="75px" src="./img/blue.png"/> Fullscreen
+          <img height="40px" width="40px" src="./img/exit.png"/> Exit  
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page 4 -->
+  <div id="page4" class="page4">
+    <object id="fullTV"></object>
+    <div id="blueButton" class="blueButton">
+      <p style="color: white; font-size:20px; font-family: arial;">Press  <img height="40px" width="75px" src="./img/blue.png"/>  to go back to the app </p>
+    </div>
+  </div>
+
+</body>
+
+</html>
